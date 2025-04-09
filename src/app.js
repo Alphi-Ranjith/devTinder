@@ -16,6 +16,9 @@ const profileRouter = require("./routes/profile");
 const requestRouter = require("./routes/request");
 const userRouter = require("./routes/user");
 
+app.use("/", (req, res) => {
+  res.send("working fine")
+});
 app.use("/", authRouter);
 app.use("/", profileRouter);
 app.use("/", requestRouter);
